@@ -1,0 +1,15 @@
+PODS:
+  - EasyPeasy (1.4.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - EasyPeasy
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  EasyPeasy: b8a2feebd47395aaf46bde178abcddd36c922d37
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: d4c116f69c937212b8f635ccce7c3ab3ac1adc08
+
+COCOAPODS: 1.2.0

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3A5A493653E88E31DF92EC /* Pods_UVVClassroom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD25E4168946877F407EAC3 /* Pods_UVVClassroom.framework */; };
 		E01CB95C1E86BCF000463F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB95B1E86BCF000463F9B /* AppDelegate.swift */; };
 		E01CB95E1E86BCF000463F9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB95D1E86BCF000463F9B /* ViewController.swift */; };
 		E01CB9611E86BCF000463F9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01CB95F1E86BCF000463F9B /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		147EC4D187F01DC9D2C4D36F /* Pods-UVVClassroom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVVClassroom.release.xcconfig"; path = "Pods/Target Support Files/Pods-UVVClassroom/Pods-UVVClassroom.release.xcconfig"; sourceTree = "<group>"; };
+		7D59F1D87D4116C3C2B5BA78 /* Pods-UVVClassroom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVVClassroom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UVVClassroom/Pods-UVVClassroom.debug.xcconfig"; sourceTree = "<group>"; };
+		DAD25E4168946877F407EAC3 /* Pods_UVVClassroom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVVClassroom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01CB9581E86BCF000463F9B /* UVVClassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVVClassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01CB95B1E86BCF000463F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01CB95D1E86BCF000463F9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E3A5A493653E88E31DF92EC /* Pods_UVVClassroom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				E01CB95A1E86BCF000463F9B /* UVVClassroom */,
 				E01CB9591E86BCF000463F9B /* Products */,
+				F9180E20D0BD8286E8BEF7BC /* Pods */,
+				E9F15BA853E5C491DB43E9E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = UVVClassroom;
 			sourceTree = "<group>";
 		};
+		E9F15BA853E5C491DB43E9E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAD25E4168946877F407EAC3 /* Pods_UVVClassroom.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9180E20D0BD8286E8BEF7BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D59F1D87D4116C3C2B5BA78 /* Pods-UVVClassroom.debug.xcconfig */,
+				147EC4D187F01DC9D2C4D36F /* Pods-UVVClassroom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01CB96A1E86BCF000463F9B /* Build configuration list for PBXNativeTarget "UVVClassroom" */;
 			buildPhases = (
+				32D36B18519A867E6C8E72FF /* [CP] Check Pods Manifest.lock */,
 				E01CB9541E86BCEF00463F9B /* Sources */,
 				E01CB9551E86BCEF00463F9B /* Frameworks */,
 				E01CB9561E86BCEF00463F9B /* Resources */,
+				424D21B81D6F0B16EF35134D /* [CP] Embed Pods Frameworks */,
+				C5C2589A4B6D9CCAC1738B73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32D36B18519A867E6C8E72FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		424D21B81D6F0B16EF35134D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UVVClassroom/Pods-UVVClassroom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5C2589A4B6D9CCAC1738B73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UVVClassroom/Pods-UVVClassroom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E01CB9541E86BCEF00463F9B /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		E01CB96B1E86BCF000463F9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D59F1D87D4116C3C2B5BA78 /* Pods-UVVClassroom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H55HQZ682T;
@@ -270,6 +346,7 @@
 		};
 		E01CB96C1E86BCF000463F9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147EC4D187F01DC9D2C4D36F /* Pods-UVVClassroom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H55HQZ682T;
