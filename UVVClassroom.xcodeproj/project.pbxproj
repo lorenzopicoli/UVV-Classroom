@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		8E3A5A493653E88E31DF92EC /* Pods_UVVClassroom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD25E4168946877F407EAC3 /* Pods_UVVClassroom.framework */; };
 		E01CB95C1E86BCF000463F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB95B1E86BCF000463F9B /* AppDelegate.swift */; };
-		E01CB95E1E86BCF000463F9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB95D1E86BCF000463F9B /* ViewController.swift */; };
+		E01CB95E1E86BCF000463F9B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB95D1E86BCF000463F9B /* RootViewController.swift */; };
 		E01CB9611E86BCF000463F9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01CB95F1E86BCF000463F9B /* Main.storyboard */; };
 		E01CB9631E86BCF000463F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E01CB9621E86BCF000463F9B /* Assets.xcassets */; };
 		E01CB9661E86BCF000463F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01CB9641E86BCF000463F9B /* LaunchScreen.storyboard */; };
+		E01CB96E1E86CB1100463F9B /* AlamofireWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB96D1E86CB1100463F9B /* AlamofireWrapper.swift */; };
+		E01CB9701E86CD1D00463F9B /* UVVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB96F1E86CD1D00463F9B /* UVVError.swift */; };
+		E073B5801E86D69D00DDD2EF /* UVVApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B57F1E86D69D00DDD2EF /* UVVApiManager.swift */; };
+		E073B5821E8817B400DDD2EF /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B5811E8817B400DDD2EF /* Building.swift */; };
+		E073B5841E8819B700DDD2EF /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B5831E8819B700DDD2EF /* Room.swift */; };
+		E073B5861E881A3800DDD2EF /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B5851E881A3800DDD2EF /* Shift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +27,17 @@
 		DAD25E4168946877F407EAC3 /* Pods_UVVClassroom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVVClassroom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01CB9581E86BCF000463F9B /* UVVClassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVVClassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01CB95B1E86BCF000463F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E01CB95D1E86BCF000463F9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E01CB95D1E86BCF000463F9B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E01CB9601E86BCF000463F9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E01CB9621E86BCF000463F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E01CB9651E86BCF000463F9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E01CB9671E86BCF000463F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E01CB96D1E86CB1100463F9B /* AlamofireWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireWrapper.swift; path = Managers/AlamofireWrapper.swift; sourceTree = "<group>"; };
+		E01CB96F1E86CD1D00463F9B /* UVVError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UVVError.swift; path = Models/UVVError.swift; sourceTree = "<group>"; };
+		E073B57F1E86D69D00DDD2EF /* UVVApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UVVApiManager.swift; path = Managers/UVVApiManager.swift; sourceTree = "<group>"; };
+		E073B5811E8817B400DDD2EF /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Building.swift; path = Models/Building.swift; sourceTree = "<group>"; };
+		E073B5831E8819B700DDD2EF /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = Models/Room.swift; sourceTree = "<group>"; };
+		E073B5851E881A3800DDD2EF /* Shift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shift.swift; path = Models/Shift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +73,36 @@
 		E01CB95A1E86BCF000463F9B /* UVVClassroom */ = {
 			isa = PBXGroup;
 			children = (
+				E01CB9721E86CD8C00463F9B /* Managers */,
+				E01CB9711E86CD7F00463F9B /* Models */,
 				E01CB95B1E86BCF000463F9B /* AppDelegate.swift */,
-				E01CB95D1E86BCF000463F9B /* ViewController.swift */,
+				E01CB95D1E86BCF000463F9B /* RootViewController.swift */,
 				E01CB95F1E86BCF000463F9B /* Main.storyboard */,
 				E01CB9621E86BCF000463F9B /* Assets.xcassets */,
 				E01CB9641E86BCF000463F9B /* LaunchScreen.storyboard */,
 				E01CB9671E86BCF000463F9B /* Info.plist */,
 			);
 			path = UVVClassroom;
+			sourceTree = "<group>";
+		};
+		E01CB9711E86CD7F00463F9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E01CB96F1E86CD1D00463F9B /* UVVError.swift */,
+				E073B5811E8817B400DDD2EF /* Building.swift */,
+				E073B5831E8819B700DDD2EF /* Room.swift */,
+				E073B5851E881A3800DDD2EF /* Shift.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E01CB9721E86CD8C00463F9B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E01CB96D1E86CB1100463F9B /* AlamofireWrapper.swift */,
+				E073B57F1E86D69D00DDD2EF /* UVVApiManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		E9F15BA853E5C491DB43E9E2 /* Frameworks */ = {
@@ -212,8 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E01CB95E1E86BCF000463F9B /* ViewController.swift in Sources */,
+				E01CB9701E86CD1D00463F9B /* UVVError.swift in Sources */,
+				E073B5821E8817B400DDD2EF /* Building.swift in Sources */,
+				E073B5841E8819B700DDD2EF /* Room.swift in Sources */,
+				E01CB95E1E86BCF000463F9B /* RootViewController.swift in Sources */,
+				E073B5861E881A3800DDD2EF /* Shift.swift in Sources */,
 				E01CB95C1E86BCF000463F9B /* AppDelegate.swift in Sources */,
+				E01CB96E1E86CB1100463F9B /* AlamofireWrapper.swift in Sources */,
+				E073B5801E86D69D00DDD2EF /* UVVApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +417,7 @@
 				E01CB96C1E86BCF000463F9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
