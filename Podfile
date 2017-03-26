@@ -8,5 +8,6 @@ target 'UVVClassroom' do
   # Pods for UVVClassroom
   pod 'EasyPeasy'
   pod 'SwiftyJSON'
+  pod 'Alamofire', '~> 4.4'
   
 end
