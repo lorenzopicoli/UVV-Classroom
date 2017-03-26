@@ -10,7 +10,7 @@ import Foundation
 class UVVApiManager: NSObject{
     
     // MARK: Variables
-    static let apiURL:String = "http://uvv.br"
+    static let apiURL:String = "http://www.uvv.br"
     static let apiURLSuffix:String = ".ashx"
     
     //MARK: Buildings

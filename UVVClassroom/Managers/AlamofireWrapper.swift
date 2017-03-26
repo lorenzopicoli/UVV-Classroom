@@ -17,6 +17,7 @@ typealias UVVNetworkResponseHandler = (JSON, UVVError?) -> Void
  * This class is a wrapper around Alamofire's (get, post, put, ...) methods
  * The idea is to provide a place to handle the response, handle errors in a custom way
  * and log the requests for easier debugging
+ * PS: We probably don't need all the methods for this simple app :)
  */
 class AlamofireWrapper: NSObject{
     
@@ -90,7 +91,7 @@ class AlamofireWrapper: NSObject{
         Alamofire.request(AlamofireWrapper.getFormatterdUrl(route: route),
                           method: .get,
                           parameters: params,
-                          encoding: JSONEncoding.default,
+                          encoding: URLEncoding.default,
                           headers: headers).responseJSON
             { response in
                 
