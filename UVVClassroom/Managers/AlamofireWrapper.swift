@@ -132,6 +132,6 @@ class AlamofireWrapper: NSObject{
     
     //MARK: Helpers
     class func getFormatterdUrl(route:String) -> String{
-        return UVVApiManager.apiURL + route + UVVApiManager.apiURLSuffix
+        return "\(UVVApiManager.apiURL)/\(route)\(UVVApiManager.apiURLSuffix)"
     }
 }
