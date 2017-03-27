@@ -15,6 +15,7 @@
 		E01CB9661E86BCF000463F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01CB9641E86BCF000463F9B /* LaunchScreen.storyboard */; };
 		E01CB96E1E86CB1100463F9B /* AlamofireWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB96D1E86CB1100463F9B /* AlamofireWrapper.swift */; };
 		E01CB9701E86CD1D00463F9B /* UVVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB96F1E86CD1D00463F9B /* UVVError.swift */; };
+		E02D74E51E88B86F00DC2BA2 /* BuildingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D74E41E88B86F00DC2BA2 /* BuildingsViewController.swift */; };
 		E073B5801E86D69D00DDD2EF /* UVVApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B57F1E86D69D00DDD2EF /* UVVApiManager.swift */; };
 		E073B5821E8817B400DDD2EF /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B5811E8817B400DDD2EF /* Building.swift */; };
 		E073B5841E8819B700DDD2EF /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B5831E8819B700DDD2EF /* Room.swift */; };
@@ -34,6 +35,7 @@
 		E01CB9671E86BCF000463F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E01CB96D1E86CB1100463F9B /* AlamofireWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireWrapper.swift; path = Managers/AlamofireWrapper.swift; sourceTree = "<group>"; };
 		E01CB96F1E86CD1D00463F9B /* UVVError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UVVError.swift; path = Models/UVVError.swift; sourceTree = "<group>"; };
+		E02D74E41E88B86F00DC2BA2 /* BuildingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildingsViewController.swift; path = ViewControllers/BuildingsViewController.swift; sourceTree = "<group>"; };
 		E073B57F1E86D69D00DDD2EF /* UVVApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UVVApiManager.swift; path = Managers/UVVApiManager.swift; sourceTree = "<group>"; };
 		E073B5811E8817B400DDD2EF /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Building.swift; path = Models/Building.swift; sourceTree = "<group>"; };
 		E073B5831E8819B700DDD2EF /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = Models/Room.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		E01CB95A1E86BCF000463F9B /* UVVClassroom */ = {
 			isa = PBXGroup;
 			children = (
+				E02D74E31E88B84200DC2BA2 /* ViewControllers */,
 				E01CB9721E86CD8C00463F9B /* Managers */,
 				E01CB9711E86CD7F00463F9B /* Models */,
 				E01CB95B1E86BCF000463F9B /* AppDelegate.swift */,
@@ -103,6 +106,14 @@
 				E073B57F1E86D69D00DDD2EF /* UVVApiManager.swift */,
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		E02D74E31E88B84200DC2BA2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E02D74E41E88B86F00DC2BA2 /* BuildingsViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E9F15BA853E5C491DB43E9E2 /* Frameworks */ = {
@@ -251,6 +262,7 @@
 				E073B5841E8819B700DDD2EF /* Room.swift in Sources */,
 				E01CB95E1E86BCF000463F9B /* RootViewController.swift in Sources */,
 				E073B5861E881A3800DDD2EF /* Shift.swift in Sources */,
+				E02D74E51E88B86F00DC2BA2 /* BuildingsViewController.swift in Sources */,
 				E01CB95C1E86BCF000463F9B /* AppDelegate.swift in Sources */,
 				E01CB96E1E86CB1100463F9B /* AlamofireWrapper.swift in Sources */,
 				E073B5801E86D69D00DDD2EF /* UVVApiManager.swift in Sources */,

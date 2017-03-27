@@ -9,5 +9,6 @@ target 'UVVClassroom' do
   pod 'EasyPeasy'
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 4.4'
-  
+  pod 'PMAlertController'
+
 end

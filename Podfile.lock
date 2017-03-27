@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (4.4.0)
   - EasyPeasy (1.4.1)
+  - PMAlertController (2.1.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - EasyPeasy
+  - PMAlertController
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   EasyPeasy: b8a2feebd47395aaf46bde178abcddd36c922d37
+  PMAlertController: 2d2c19af12edb50753d636395f9456c8cde1e858
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 7655c2eeae09faabc5e33887870494f7f49e3571
+PODFILE CHECKSUM: 4d2fdb3a584c020fd46dd17fcb1626f317595b2e
 
 COCOAPODS: 1.2.0
