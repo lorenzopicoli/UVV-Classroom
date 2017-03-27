@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+
 class UVVApiManager: NSObject{
     
     // MARK: Variables
@@ -38,23 +40,27 @@ class UVVApiManager: NSObject{
             return
         }
         
-        let parameters: [String: Any] = [
-            "prd": buildingId,
-            "hrr": shift.rawValue,
-            "dss": date
-        ]
+        // We are making the request using Alamofire directly and building the URL ourselves
+        // without proper encoding
+        // If the API wasn't shitty and required(!) the URL params to be in a certain order
+        // we would be able to use our wrapper
         
-        AlamofireWrapper.get(route: "getSalas", params: parameters) { (result, error) in
-            guard result != .null,
-                let resultArray = result.array else { return completion([], error) }
-            
-            var rooms:[Room] = []
-            
-            for roomData in resultArray{
-                rooms.append(Room(json: roomData))
-            }
-            
-            completion(rooms, nil)
+        let baseUrl = AlamofireWrapper.getFormatterdUrl(route: "getSalas")
+        let url = "\(baseUrl)?prd=\(buildingId)&hrr=\(shift.rawValue)&dss=\(Utility.dateToApiString(date: date))"
+        
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
+            AlamofireWrapper.handleResponse(response: response, completion: { (result, error) in
+                guard result != .null,
+                    let resultArray = result.array else { return completion([], error) }
+                
+                var rooms:[Room] = []
+                
+                for roomData in resultArray{
+                    rooms.append(Room(json: roomData))
+                }
+                
+                completion(rooms, nil)
+            })
         }
     }
 }
