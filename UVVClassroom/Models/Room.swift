@@ -14,9 +14,8 @@ class Room: NSObject{
     var shift:Shift?
     var shiftDescription = ""
     var roomNumber = 0
-    var classNumber = 0
-    var className = ""
-    var professorName = ""
+    var className:String?
+    var professorName:String?
     var alert:String?
     
     init(json: JSON) {
@@ -34,15 +33,15 @@ class Room: NSObject{
             self.roomNumber = roomNumber
         }
         
-        if let professorName = json["NOProfessor"].string {
+        if let professorName = json["NOProfessor"].string, professorName != "" {
             self.professorName = professorName
         }
         
-        if let className = json["NOTurma"].string {
+        if let className = json["NOTurma"].string, className != "" {
             self.className = className
         }
         
-        if let alert = json["DSAlerta"].string {
+        if let alert = json["DSAlerta"].string, alert != "" {
             self.alert = alert
         }
     }
