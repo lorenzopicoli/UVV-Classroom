@@ -15,7 +15,8 @@ class RootViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.present(BuildingsViewController(), animated: true, completion: nil)
+        let navController = UINavigationController(rootViewController: BuildingsViewController())
+        self.present(navController, animated: true, completion: nil)
     }
 
 }

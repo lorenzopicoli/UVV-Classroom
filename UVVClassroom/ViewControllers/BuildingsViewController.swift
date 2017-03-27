@@ -25,6 +25,9 @@ class BuildingsViewController: UIViewController {
     //MARK: View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Prédios"
+        
         setupViews()
         setupConstraints()
     }
@@ -38,6 +41,8 @@ class BuildingsViewController: UIViewController {
                 self.showError(message: error.message)
                 return
             }
+            
+            self.buildings = []
             
             for building in buildings {
                 self.buildings.append(building)
@@ -75,14 +80,14 @@ class BuildingsViewController: UIViewController {
 //MARK: Table View Delegate
 extension BuildingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Go")
+        self.navigationController?.pushViewController(RoomsViewController(building: buildings[indexPath.row]), animated: true)
     }
 }
 
 //MARK: Table View Data Source
 extension BuildingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "BuildingsViewController")
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "BuildingsCell")
         cell.textLabel?.text = buildings[indexPath.row].name
         cell.detailTextLabel?.text = buildings[indexPath.row].locDescription
         
