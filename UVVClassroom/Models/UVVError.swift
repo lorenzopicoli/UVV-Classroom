@@ -19,34 +19,34 @@ enum UVVError:Int {
     var title: String {
         switch self {
         case .requestFailed:
-            return "Error"
+            return "Erro"
         case .notFound:
-            return "Not found"
+            return "Não encontrado"
         case .serverError:
             return "Oops"
         case .authorizationError:
-            return "Error"
+            return "Erro"
         case .noError:
             return ""
         default:
-            return "Error"
+            return "Erro"
         }
     }
     
     var message: String {
         switch self {
         case .requestFailed:
-            return "Could not connect to server, please check your internet connection"
+            return "Falha ao se conectar ao servidor, uma conexão com a internet é necessária"
         case .notFound:
-            return "Error 404"
+            return "Não encontrado"
         case .serverError:
-            return "Please try again later"
+            return "Tente novamente mais tarde"
         case .authorizationError:
-            return "You are not authorized"
+            return "Você não está autorizado"
         case .noError:
             return ""
         default:
-            return "Unkown error"
+            return "Erro desconhecido"
         }
     }
     
