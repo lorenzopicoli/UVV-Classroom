@@ -87,9 +87,10 @@ extension BuildingsViewController: UITableViewDelegate {
 //MARK: Table View Data Source
 extension BuildingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "BuildingsCell")
-        cell.textLabel?.text = buildings[indexPath.row].name
-        cell.detailTextLabel?.text = buildings[indexPath.row].locDescription
+        let building = buildings[indexPath.row]
+        let imageName = building.imageName ?? "default.jpg"
+        
+        let cell = BuildingTableViewCell(imageName: imageName, title: building.name)
         
         return cell
     }
@@ -100,5 +101,9 @@ extension BuildingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return buildings.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
 }

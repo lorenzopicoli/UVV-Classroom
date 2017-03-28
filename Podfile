@@ -10,5 +10,6 @@ target 'UVVClassroom' do
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 4.4'
   pod 'PMAlertController'
+  pod 'EZYGradientView', :git => 'https://github.com/Niphery/EZYGradientView'
 
 end

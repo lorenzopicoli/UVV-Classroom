@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E3A5A493653E88E31DF92EC /* Pods_UVVClassroom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD25E4168946877F407EAC3 /* Pods_UVVClassroom.framework */; };
+		E00197961E8A9CDF00E760C1 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00197951E8A9CDF00E760C1 /* BuildingTableViewCell.swift */; };
 		E01CB95C1E86BCF000463F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB95B1E86BCF000463F9B /* AppDelegate.swift */; };
 		E01CB95E1E86BCF000463F9B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB95D1E86BCF000463F9B /* RootViewController.swift */; };
 		E01CB9611E86BCF000463F9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01CB95F1E86BCF000463F9B /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		147EC4D187F01DC9D2C4D36F /* Pods-UVVClassroom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVVClassroom.release.xcconfig"; path = "Pods/Target Support Files/Pods-UVVClassroom/Pods-UVVClassroom.release.xcconfig"; sourceTree = "<group>"; };
 		7D59F1D87D4116C3C2B5BA78 /* Pods-UVVClassroom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UVVClassroom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UVVClassroom/Pods-UVVClassroom.debug.xcconfig"; sourceTree = "<group>"; };
 		DAD25E4168946877F407EAC3 /* Pods_UVVClassroom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UVVClassroom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E00197951E8A9CDF00E760C1 /* BuildingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildingTableViewCell.swift; path = UICompoments/BuildingTableViewCell.swift; sourceTree = "<group>"; };
 		E01CB9581E86BCF000463F9B /* UVVClassroom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVVClassroom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01CB95B1E86BCF000463F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01CB95D1E86BCF000463F9B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E00197941E8A9CBA00E760C1 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				E00197951E8A9CDF00E760C1 /* BuildingTableViewCell.swift */,
+			);
+			name = "UI Components";
+			sourceTree = "<group>";
+		};
 		E01CB94F1E86BCEF00463F9B = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		E01CB95A1E86BCF000463F9B /* UVVClassroom */ = {
 			isa = PBXGroup;
 			children = (
+				E00197941E8A9CBA00E760C1 /* UI Components */,
 				E0D046FD1E88C5A1001086A5 /* Other */,
 				E02D74E31E88B84200DC2BA2 /* ViewControllers */,
 				E01CB9721E86CD8C00463F9B /* Managers */,
@@ -278,6 +289,7 @@
 				E073B5861E881A3800DDD2EF /* Shift.swift in Sources */,
 				E02D74E51E88B86F00DC2BA2 /* BuildingsViewController.swift in Sources */,
 				E01CB95C1E86BCF000463F9B /* AppDelegate.swift in Sources */,
+				E00197961E8A9CDF00E760C1 /* BuildingTableViewCell.swift in Sources */,
 				E0D046FC1E88C341001086A5 /* RoomsViewController.swift in Sources */,
 				E01CB96E1E86CB1100463F9B /* AlamofireWrapper.swift in Sources */,
 				E0D046FF1E88C5B6001086A5 /* Utility.swift in Sources */,

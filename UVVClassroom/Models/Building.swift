@@ -13,7 +13,7 @@ class Building: NSObject{
     var id:Int?
     var name = ""
     var courses = ""
-    var imageName = ""
+    var imageName:String?
     var locDescription = ""
     var numberOfRooms = 0
     
@@ -36,9 +36,7 @@ class Building: NSObject{
             self.courses = courses
         }
         
-        if let imageName = json["NOImagem"].string {
-            self.imageName = imageName
-        }
+        self.imageName = json["NOImagem"].string
         
         if let numberOfRooms = json["NRSalasPredio"].int {
             self.numberOfRooms = numberOfRooms

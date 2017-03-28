@@ -1,21 +1,33 @@
 PODS:
   - Alamofire (4.4.0)
   - EasyPeasy (1.4.1)
+  - EZYGradientView (1.5.1)
   - PMAlertController (2.1.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - EasyPeasy
+  - EZYGradientView (from `https://github.com/Niphery/EZYGradientView`)
   - PMAlertController
   - SwiftyJSON
+
+EXTERNAL SOURCES:
+  EZYGradientView:
+    :git: https://github.com/Niphery/EZYGradientView
+
+CHECKOUT OPTIONS:
+  EZYGradientView:
+    :commit: e8cc7bf2fb77557af214289288ebc96776ffbf57
+    :git: https://github.com/Niphery/EZYGradientView
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   EasyPeasy: b8a2feebd47395aaf46bde178abcddd36c922d37
+  EZYGradientView: f13e7a9e774b906c66d617fb04a13c8853ba25b4
   PMAlertController: 2d2c19af12edb50753d636395f9456c8cde1e858
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 4d2fdb3a584c020fd46dd17fcb1626f317595b2e
+PODFILE CHECKSUM: 9bf33b2bfad912e9bbf7612ea98719d418ffce28
 
 COCOAPODS: 1.2.0
