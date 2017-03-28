@@ -26,6 +26,7 @@ class BuildingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Prédios"
         Utility.setLogoTitle(vc: self)
         
         setupViews()

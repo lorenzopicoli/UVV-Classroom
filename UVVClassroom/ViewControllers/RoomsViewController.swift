@@ -37,6 +37,7 @@ class RoomsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Salas"
         Utility.setLogoTitle(vc: self)
         
         setupViews()
