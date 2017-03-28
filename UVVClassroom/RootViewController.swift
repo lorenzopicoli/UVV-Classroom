@@ -16,6 +16,10 @@ class RootViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         let navController = UINavigationController(rootViewController: BuildingsViewController())
+        navController.navigationBar.barTintColor = .uvvBlue
+        navController.navigationBar.tintColor = .white
+        navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+
         self.present(navController, animated: true, completion: nil)
     }
 
