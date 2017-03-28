@@ -26,7 +26,7 @@ class BuildingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Prédios"
+        Utility.setLogoTitle(vc: self)
         
         setupViews()
         setupConstraints()
@@ -54,8 +54,7 @@ class BuildingsViewController: UIViewController {
     
     //MARK: Constraints
     func setupConstraints(){
-        // Apply left = 0, right = 0, top = 20 and bottom = 0 constraints to its superview
-        tableView <- Edges(UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0))
+        tableView <- Edges()
     }
     
     //MARK: Views

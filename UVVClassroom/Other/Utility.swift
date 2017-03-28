@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Utility: NSObject{
     
@@ -15,5 +16,12 @@ class Utility: NSObject{
         formatter.dateFormat = "dd/MM/yyyy"
         
         return formatter.string(from: date)
+    }
+    
+    class func setLogoTitle(vc: UIViewController) {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
+        imageView.frame.size = CGSize(width: 39, height: 39)
+        imageView.contentMode = .scaleAspectFit
+        vc.navigationItem.titleView = imageView
     }
 }
