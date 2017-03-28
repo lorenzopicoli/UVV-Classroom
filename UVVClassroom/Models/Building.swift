@@ -38,6 +38,10 @@ class Building: NSObject{
         
         self.imageName = json["NOImagem"].string
         
+        if imageName == "anfiteatro.jpg" {
+            imageName = "cineteatro.jpg"
+        }
+        
         if let numberOfRooms = json["NRSalasPredio"].int {
             self.numberOfRooms = numberOfRooms
         }
