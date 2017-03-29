@@ -18,6 +18,8 @@
 		E01CB96E1E86CB1100463F9B /* AlamofireWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB96D1E86CB1100463F9B /* AlamofireWrapper.swift */; };
 		E01CB9701E86CD1D00463F9B /* UVVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB96F1E86CD1D00463F9B /* UVVError.swift */; };
 		E02D74E51E88B86F00DC2BA2 /* BuildingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02D74E41E88B86F00DC2BA2 /* BuildingsViewController.swift */; };
+		E053B2BF1E8B6D3200FB3A1A /* RoomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E053B2BE1E8B6D3200FB3A1A /* RoomCollectionViewLayout.swift */; };
+		E053B2C11E8B749900FB3A1A /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E053B2C01E8B749900FB3A1A /* RoomCollectionViewCell.swift */; };
 		E073B5801E86D69D00DDD2EF /* UVVApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B57F1E86D69D00DDD2EF /* UVVApiManager.swift */; };
 		E073B5821E8817B400DDD2EF /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B5811E8817B400DDD2EF /* Building.swift */; };
 		E073B5841E8819B700DDD2EF /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073B5831E8819B700DDD2EF /* Room.swift */; };
@@ -42,6 +44,8 @@
 		E01CB96D1E86CB1100463F9B /* AlamofireWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireWrapper.swift; path = Managers/AlamofireWrapper.swift; sourceTree = "<group>"; };
 		E01CB96F1E86CD1D00463F9B /* UVVError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UVVError.swift; path = Models/UVVError.swift; sourceTree = "<group>"; };
 		E02D74E41E88B86F00DC2BA2 /* BuildingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildingsViewController.swift; path = ViewControllers/BuildingsViewController.swift; sourceTree = "<group>"; };
+		E053B2BE1E8B6D3200FB3A1A /* RoomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomCollectionViewLayout.swift; path = UICompoments/RoomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		E053B2C01E8B749900FB3A1A /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomCollectionViewCell.swift; path = UICompoments/RoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E073B57F1E86D69D00DDD2EF /* UVVApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UVVApiManager.swift; path = Managers/UVVApiManager.swift; sourceTree = "<group>"; };
 		E073B5811E8817B400DDD2EF /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Building.swift; path = Models/Building.swift; sourceTree = "<group>"; };
 		E073B5831E8819B700DDD2EF /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = Models/Room.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				E00197951E8A9CDF00E760C1 /* BuildingTableViewCell.swift */,
+				E053B2BE1E8B6D3200FB3A1A /* RoomCollectionViewLayout.swift */,
+				E053B2C01E8B749900FB3A1A /* RoomCollectionViewCell.swift */,
 			);
 			name = "UI Components";
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 			files = (
 				E01CB9701E86CD1D00463F9B /* UVVError.swift in Sources */,
 				E073B5821E8817B400DDD2EF /* Building.swift in Sources */,
+				E053B2C11E8B749900FB3A1A /* RoomCollectionViewCell.swift in Sources */,
 				E073B5841E8819B700DDD2EF /* Room.swift in Sources */,
+				E053B2BF1E8B6D3200FB3A1A /* RoomCollectionViewLayout.swift in Sources */,
 				E01CB95E1E86BCF000463F9B /* RootViewController.swift in Sources */,
 				E073B5861E881A3800DDD2EF /* Shift.swift in Sources */,
 				E02D74E51E88B86F00DC2BA2 /* BuildingsViewController.swift in Sources */,

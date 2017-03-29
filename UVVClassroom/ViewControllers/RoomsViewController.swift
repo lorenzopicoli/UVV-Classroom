@@ -13,10 +13,10 @@ import PMAlertController
 class RoomsViewController: UIViewController {
     
     //MARK: Variables
-    private var tableView:UITableView!{
+    private var collectionView:UICollectionView!{
         didSet{
-            tableView.delegate = self
-            tableView.dataSource = self
+            collectionView.delegate = self
+            collectionView.dataSource = self
         }
     }
     
@@ -37,8 +37,7 @@ class RoomsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Salas"
-        Utility.setLogoTitle(vc: self)
+        self.title = building.name.replacingOccurrences(of: "Prédio", with: "")
         
         setupViews()
         setupConstraints()
@@ -46,7 +45,7 @@ class RoomsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         UVVApiManager.getRooms(fromBuilding: building, shift: .firstMorning, onDate: Date()) { (rooms, error) in
             if let error = error {
                 self.showError(message: error.message)
@@ -60,14 +59,16 @@ class RoomsViewController: UIViewController {
                 self.rooms.append(room)
             }
             
-            self.tableView.reloadData()
+            self.collectionView.reloadData()
         }
     }
     
     //MARK: Constraints
     func setupConstraints(){
         // Apply left = 0, right = 0, top = 20 and bottom = 0 constraints to its superview
-        tableView <- Edges(UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0))
+        collectionView <- [
+            Edges(UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0))
+        ]
     }
     
     //MARK: Views
@@ -75,8 +76,16 @@ class RoomsViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        tableView = UITableView()
-        view.addSubview(tableView)
+        // Collection View
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: UltravisualLayout())
+        collectionView.backgroundColor = .clear
+        self.collectionView.register(RoomCollectionViewCell.self, forCellWithReuseIdentifier: "RoomsCell")
+        
+        if #available(iOS 10.0, *) {
+            collectionView.isPrefetchingEnabled = false
+        }
+        
+        view.addSubview(collectionView)
     }
     
     //MARK: Helpers
@@ -89,34 +98,46 @@ class RoomsViewController: UIViewController {
     }
 }
 
-//MARK: Table View Delegate
-extension RoomsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Go")
-    }
+//MARK: Collection View Delegate
+extension RoomsViewController: UICollectionViewDelegate {
+
 }
 
-//MARK: Table View Data Source
-extension RoomsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//MARK: Collection View Data Source
+extension RoomsViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return rooms.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RoomsCell", for: indexPath) as! RoomCollectionViewCell
+        
         let room = rooms[indexPath.row]
+        let label = UILabel()
         
-        guard let className = room.className,
-            let professorName = room.professorName else { return UITableViewCell() }
+        label.text = "\(room.roomNumber)"
+        label.textColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "RoomsCell")
+        cell.contentView.addSubview(label)
         
-        cell.textLabel?.text = "\(room.roomNumber) - \(className)"
-        cell.detailTextLabel?.text = professorName
+        label <- [
+            CenterX(),
+            CenterY()
+        ]
         
         return cell
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rooms.count
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        for view in cell.contentView.subviews {
+            if let a = view as? UILabel {
+                a.removeFromSuperview()
+            }
+        }
     }
 }
