@@ -77,7 +77,7 @@ class RoomsViewController: UIViewController {
         view.backgroundColor = .white
         
         // Collection View
-        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: UltravisualLayout())
+        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: RoomsCollectionViewLayout())
         collectionView.backgroundColor = .clear
         self.collectionView.register(RoomCollectionViewCell.self, forCellWithReuseIdentifier: "RoomsCell")
         
