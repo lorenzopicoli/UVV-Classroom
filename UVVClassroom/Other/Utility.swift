@@ -20,7 +20,7 @@ class Utility: NSObject{
     
     class func setLogoTitle(vc: UIViewController) {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "logo"))
-        imageView.frame.size = CGSize(width: 39, height: 39)
+        imageView.frame.size = CGSize(width: 40, height: 40)
         imageView.contentMode = .scaleAspectFit
         vc.navigationItem.titleView = imageView
     }
